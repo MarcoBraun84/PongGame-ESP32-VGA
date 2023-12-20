@@ -92,3 +92,4 @@ Dubliziert und die I2C-Adresse geändert zu x069. (AD0 mit 3,3V)
 ### Kontroller Gehäuse
 Die Idee war ein schlichtes Grundkonzept, welches unteranderem für den einhändigen Gebrauch geeigent sein sollte.
 
+![Screenshot 2023-12-20 234227](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/419ace2a-d412-42a6-a761-d5a48181a605)
