@@ -76,6 +76,16 @@ Erweitert wurde:
 Genutzte Libary: 
 ```
 #include <MPU6050_tockn.h>
+#include <MPU6050_tockn69.h>
+MPU6050 mpu6050(Wire);
+MPU605069 mpu60502(Wire);
+Wire.begin();
+mpu6050.begin();
+mpu6050.calcGyroOffsets(true);
+mpu60502.begin();
+mpu60502.calcGyroOffsets(true);
+mpu6050.update();
+mpu605020.update();
 ```
 Dubliziert und die I2C-Adresse geändert zu x069. (AD0 mit 3,3V)
 
