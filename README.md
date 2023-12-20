@@ -12,6 +12,11 @@ Hierfür wurde die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib
 Um diese zu nutzen wurden folgende Befehle genutzt:  
 
 ```
+const int redPin = 14;
+const int greenPin = 19;
+const int bluePin = 27;
+const int hsyncPin = 32;
+const int vsyncPin = 33;
 VGA3Bit vga;
 vga.setFrameBufferCount(2);
 Mode myMode = vga.MODE320x240;
@@ -24,6 +29,7 @@ void loop(){
 }
 ```
 
+![Screenshot 2023-12-20 233102](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7121787a-c713-4a21-82c4-fd71c8974b97)
 
 
 ### Pong Code
