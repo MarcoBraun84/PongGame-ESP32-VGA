@@ -5,7 +5,7 @@ Es soll eine Spielekonsole basierend auf einem ESP32 entwickelt werden. Die Spie
 
 ## Umsetzung
 ### VGA Monitor Ausgabe
-Hierfür wurde die Libary [bitluni ESP32lib]([https://pages.github.com/](https://github.com/bitluni/ESP32Lib)https://github.com/bitluni/ESP32Lib) genutzt.
+Hierfür wurde die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) genutzt.
 ```
 #include <ESP32Lib.h>
 ```
@@ -23,3 +23,50 @@ void loop(){
   vga.show();
 }
 ```
+
+### MPU6050 Steuerung
+Genutzte Libary: 
+```
+#include <MPU6050_tockn.h>
+```
+
+### Pong Code
+Den zu grundeliegenden *Game Loop* und die *draw_player_paddle*-Funktion des Spiels entnehmten wir aus [diesem Projekt](https://github.com/nickbild/pico_pong).
+Hieraus ergab sich die **Ball_Bewegung**-Funktion:
+```
+void Ball_Bewegung(){
+//Links
+  if (ball_x - radius < B_Schlaeger) {
+    vx = vx * - 1;
+    Zufall();
+//Punkt
+    if (ball_y > p1_y + H_Schlaeger) point_scored(2);
+    else if (ball_y + radius < p1_y) point_scored(2);
+    else tone(speaker_out, 440, 10);
+  }
+//Rechts
+  if (ball_x + radius > p2_x) {
+    
+    vx = vx * - 1;
+    Zufall();
+//Punkt
+    if (ball_y > p2_y + H_Schlaeger) point_scored(1);
+    else if (ball_y + radius < p2_y) point_scored(1);
+    else tone(speaker_out, 440, 10);
+  }
+//Unten&Oben
+  if (ball_y < 12 + radius || ball_y > 230 - radius) {
+    vy = vy * -1;
+    Zufall();
+    tone(speaker_out, 500, 10);
+  }
+//Bewegung
+  ball_x = ball_x + vx;
+  ball_y = ball_y + vy;
+  vga.fillEllipse(ball_x, ball_y, radius, radius, vga.RGB(255, 255, 255));
+}
+```
+Erweitert wurde:
+- Zufall-Funktion: verändert die Ballbewegung bei einer Berührung sehr unwahrscheinlich
+- tone-Funktiion: erzeugt über einen Piper abprall Geräusche des Balls
+- vga.fillEllipse-Funktion: erstellt das Bild des Balls
