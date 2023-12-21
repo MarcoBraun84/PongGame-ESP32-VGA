@@ -17,6 +17,7 @@ const int greenPin = 19;
 const int bluePin = 27;
 const int hsyncPin = 32;
 const int vsyncPin = 33;
+
 VGA3Bit vga;
 vga.setFrameBufferCount(2);
 Mode myMode = vga.MODE320x240;
@@ -25,6 +26,8 @@ vga.init(myMode, redPin, greenPin, bluePin, hsyncPin, vsyncPin);
 
 void loop(){
   vga.clear(0);
+  vga.fillRect(0, 2, vga.xres, 10, vga.RGB(255, 255, 255));
+  vga.fillEllipse(ball_x, ball_y, radius, radius, vga.RGB(255, 255, 255));
   vga.show();
 }
 ```
@@ -73,10 +76,13 @@ Erweitert wurde:
 - vga.fillEllipse-Funktion: erstellt das Bild des Balls
 
 ### MPU6050 Steuerung
-Genutzte Libary: 
+Genutzte Libary: [MPU6050_tockn](https://github.com/Tockn/MPU6050_tockn)
+Leider unterstützt diese keine Adressierung des MPU6050, wodurch mehrere MPUs nicht möglich sind. Lediglich durch dublizieren der Library und ändern der I2C-Adresse werden zwei MPUs ermöglicht. (AD0 mit 3,3V ändert die Adresse zu x069)
+
 ```
 #include <MPU6050_tockn.h>
 #include <MPU6050_tockn69.h>
+
 MPU6050 mpu6050(Wire);
 MPU605069 mpu60502(Wire);
 Wire.begin();
@@ -84,10 +90,15 @@ mpu6050.begin();
 mpu6050.calcGyroOffsets(true);
 mpu60502.begin();
 mpu60502.calcGyroOffsets(true);
+
 mpu6050.update();
-mpu605020.update();
+Serial.print("angleX : ");
+Serial.println(mpu6050.getAngleX());
+
+Serial.print("angleX2 : ");
+Serial.println(mpu60502.getAngleX());
+mpu60502.update();
 ```
-Dubliziert und die I2C-Adresse geändert zu x069. (AD0 mit 3,3V)
 
 ### Kontroller Gehäuse
 Die Idee war ein schlichtes Grundkonzept, welches unteranderem für den einhändigen Gebrauch geeigent sein sollte.
