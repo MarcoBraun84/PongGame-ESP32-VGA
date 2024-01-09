@@ -30,11 +30,15 @@ installation librarys
 ### 3D-Druck: Gehäuse, Kontroller
 Grundidee für das designen der Gehäuse ist ein komplett modualres Konzept, um alle Bauteile bei anderer Verwendung wiederzunutzen. Zudem sollten keine Schrauben zur Montage nötig sein.
 #### Gehäuse: 
-![Screenshot 2023-12-20 234227](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/419ace2a-d412-42a6-a761-d5a48181a605)
+![Gehäuse Konsole](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7bbf8f2c-fc84-4adc-a0d5-0c7b5efcb596)
+![Gehäusedeckel Konsole](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/76756885-c001-4632-9bed-7917026a0189)
+
 #### Kontroller Player 1: 
-![Screenshot 2023-12-20 234227](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/419ace2a-d412-42a6-a761-d5a48181a605)
+![Kontroller 1](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/f1b671e0-d6c7-474e-93c1-5dd18ab367cc)
+
 #### Kontroller Player 2: 
-![Screenshot 2023-12-20 234227](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/419ace2a-d412-42a6-a761-d5a48181a605)
+![Kontroller 2](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/ef02c4bd-ee9f-4f61-a6d0-01b6baf0824e)
+
 
 ## Zusätzliche Codeerklärung
 
