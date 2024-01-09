@@ -1,7 +1,7 @@
 # pong-esp32-vga
 
 ## Aufgabenstellung
-Es soll eine Spielekonsole basierend auf einem ESP32 entwickelt werden. Die Spielersteuerung erfolgt über zwei Lagesensoren (MPU6050). Die Ausgabe erfolgt über ein Monitor, der über VGA angesteurt wird.
+Es soll eine Spielekonsole, basierend auf einem ESP32, entwickelt werden. Die Spielersteuerung erfolgt über zwei Lagesensoren (MPU6050). Die Ausgabe erfolgt über ein Monitor, der über VGA angesteurt wird.
 
 ## Umsetzung
 ### Grundlage
@@ -27,11 +27,13 @@ installation librarys
 ![Screenshot 2023-12-20 233102](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7121787a-c713-4a21-82c4-fd71c8974b97)
 
 
-### 3D-Druck: Gehäuse, Kontroller 
-
-#### Kontroller Gehäuse
-Die Idee war ein schlichtes Grundkonzept, welches unteranderem für den einhändigen Gebrauch geeigent sein sollte.
-
+### 3D-Druck: Gehäuse, Kontroller
+Grundidee für das designen der Gehäuse ist ein komplett modualres Konzept, um alle Bauteile bei anderer Verwendung wiederzunutzen. Zudem sollten keine Schrauben zur Montage nötig sein.
+#### Gehäuse: 
+![Screenshot 2023-12-20 234227](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/419ace2a-d412-42a6-a761-d5a48181a605)
+#### Kontroller Player 1: 
+![Screenshot 2023-12-20 234227](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/419ace2a-d412-42a6-a761-d5a48181a605)
+#### Kontroller Player 2: 
 ![Screenshot 2023-12-20 234227](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/419ace2a-d412-42a6-a761-d5a48181a605)
 
 ## Zusätzliche Codeerklärung
@@ -41,7 +43,7 @@ Hierfür wurde die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib
 ```
 #include <ESP32Lib.h>
 ```
-Um diese zu nutzen wurden folgende Befehle genutzt:  
+Um diese grundlegend nutzen zu können, sind folgende Befehle nötig:  
 
 ```
 const int redPin = 14;
@@ -130,4 +132,6 @@ Serial.print("angleX2 : ");
 Serial.println(mpu60502.getAngleX());
 mpu60502.update();
 ```
+### Knopf-Funktion bzw. debouncing
 
+https://docs.arduino.cc/built-in-examples/digital/Debounce
