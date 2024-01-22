@@ -47,12 +47,11 @@ Grundidee für das designen der Gehäuse ist ein komplett modualres Konzept, um 
 
 ### VGA Monitor Ausgabe
 Hierfür wurde die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) genutzt.
-```
-#include <ESP32Lib.h>
-```
 Um diese grundlegend nutzen zu können, sind folgende Befehle nötig:  
 
 ```
+#include <ESP32Lib.h>
+
 const int redPin = 14;
 const int greenPin = 19;
 const int bluePin = 27;
@@ -72,8 +71,6 @@ void loop(){
   vga.show();
 }
 ```
-
-
 
 ### Pong Code
 Den zu grundeliegenden *Game Loop* und die *draw_player_paddle*-Funktion des Spiels entnehmten wir aus [diesem Projekt](https://github.com/nickbild/pico_pong).
