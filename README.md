@@ -23,8 +23,9 @@ Nach der installation der Arduino IDE, müssen die Librarys installiert werden. 
 
 ### Hardware Inbetriebnahme
 #### VGA-Kbael vorbereiten
-Die Bildübertragung benötigt 6 Ardern (R, G, B, V-Syc, H-Syc, GRD). Diese müssen entwerder durch Jumper-Kabel direkt vom VGA-Kabelstecker abgegriffen werden (siehe Bild) oder durch kappen eines Kabels verbunden werden.
+Die Bildübertragung benötigt 6 Ardern (R, G, B, V-Syc, H-Syc, GRD). Diese können durch Jumper-Kabel direkt vom VGA-Kabelstecker abgegriffen werden (siehe Bild).
 ![Screenshot 2023-12-20 233102](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7121787a-c713-4a21-82c4-fd71c8974b97)
+
 #### Schaltplan:
 
 
