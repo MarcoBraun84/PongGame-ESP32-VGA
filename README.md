@@ -18,7 +18,7 @@ Es soll eine Spielekonsole, basierend auf einem ESP32, entwickelt werden. Die Sp
     - [Library bitluni_ESP32Lib](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/bitluni_ESP32Lib.zip), [github bitluni ESP32lib](https://github.com/bitluni/ESP32Lib)
 
 ### Software Installation
-installation librarys
+Nach der installation der Arduino IDE, müssen die Librarys installiert werden. Hierfür kann in der IDE unter *Sketch -> Include Library -> Add .ZIP Library* die verlinkten Zip-Librarys installiert werden. 
 
 
 ### Hardware Inbetriebnahme
