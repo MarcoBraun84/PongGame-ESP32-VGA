@@ -1,22 +1,24 @@
 # pong-esp32-vga
 
 ## Aufgabenstellung
+
 Es soll eine Spielekonsole, basierend auf einem ESP32, entwickelt werden. Die Spielersteuerung erfolgt über zwei Lagesensoren (MPU6050). Die Ausgabe erfolgt über ein Monitor, der über VGA angesteurt wird.
 
 ## Umsetzung
 
-  
-
 ### Software Installation
+
 - [Arduino IDE](https://www.arduino.cc/en/software)
 - [Library MPU6050](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn.zip), [github Library MPU6050](https://github.com/Tockn/MPU6050_tockn)
 - [Library MPU605069](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn69.zip)
 - [Library bitluni_ESP32Lib](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/bitluni_ESP32Lib.zip), [github bitluni ESP32lib](https://github.com/bitluni/ESP32Lib)
+
 Nach der installation der Arduino IDE, müssen die Librarys installiert werden. Hierfür kann in der IDE unter *Sketch -> Include Library -> Add .ZIP Library* die verlinkten Zip-Librarys installiert werden.
 
-
 ### Hardware
+
 Benötigt wird
+
 - [ESP32-Entwicklerboard](https://www.reichelt.de/nodemcu-esp32-wifi-und-bluetooth-modul-debo-jt-esp32-p219897.html?&trstct=pos_0&nbc=1)
 - 2x [MPU6050](https://www.reichelt.de/entwicklerboards-beschleunigung-gyroskop-3-achsen-mpu-6050-debo-hmc5883l-2-p282539.html?&trstct=pos_0&nbc=1)
 - [Jumper Kabel / Steckbrückenkabel](https://www.reichelt.de/entwicklerboards-steckbrueckenkabel-20cm-3x-20-kabel-debo-kabelset8-p280591.html?&trstct=pos_2&nbc=1)
@@ -24,6 +26,7 @@ Benötigt wird
 - Knöpfe
 
 #### VGA-Kbael vorbereiten
+
 Die Bildübertragung benötigt 6 Ardern (R, G, B, V-Syc, H-Syc, GRD). Diese können durch Jumper-Kabel direkt vom VGA-Kabelstecker abgegriffen werden (siehe Bild).
 
 ![Screenshot 2023-12-20 233102](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7121787a-c713-4a21-82c4-fd71c8974b97)
@@ -35,8 +38,10 @@ Alternativ kann das VGA-Kabel direkt verlötet werden, hierbei bietet es sich an
 
 
 ### 3D-Druck: Gehäuse, Kontroller
+
 Grundidee für das designen der Gehäuse ist ein komplett modualres Konzept, um alle Bauteile bei anderer Verwendung wiederzunutzen. Zudem sollten keine Schrauben zur Montage nötig sein.
-#### Gehäuse: 
+
+#### Gehäuse:
 ![Gehäuse Konsole](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7bbf8f2c-fc84-4adc-a0d5-0c7b5efcb596)
 ![Gehäusedeckel Konsole](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/76756885-c001-4632-9bed-7917026a0189)
 
