@@ -4,8 +4,6 @@
 Es soll eine Spielekonsole, basierend auf einem ESP32, entwickelt werden. Die Spielersteuerung erfolgt über zwei Lagesensoren (MPU6050). Die Ausgabe erfolgt über ein Monitor, der über VGA angesteurt wird.
 
 ## Umsetzung
-### Grundlage
-- Hardware
 
   
 
@@ -24,9 +22,12 @@ Benötigt wird
 - [Jumper Kabel / Steckbrückenkabel](https://www.reichelt.de/entwicklerboards-steckbrueckenkabel-20cm-3x-20-kabel-debo-kabelset8-p280591.html?&trstct=pos_2&nbc=1)
 - [VGA-Kabel](https://www.reichelt.de/vga-monitor-kabel-15-pol-vga-stecker-1-m-st-mxtmmhq1m-p274592.html?&trstct=vrt_pdn&nbc=1)
 - Knöpfe
+
 #### VGA-Kbael vorbereiten
 Die Bildübertragung benötigt 6 Ardern (R, G, B, V-Syc, H-Syc, GRD). Diese können durch Jumper-Kabel direkt vom VGA-Kabelstecker abgegriffen werden (siehe Bild).
+
 ![Screenshot 2023-12-20 233102](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7121787a-c713-4a21-82c4-fd71c8974b97)
+
 Alternativ kann das VGA-Kabel direkt verlötet werden, hierbei bietet es sich an, die Ardern mit einer Durchgangsprüfung zu bestimmen.
 
 #### Schaltplan:
