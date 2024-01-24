@@ -13,7 +13,9 @@ Es soll eine Spielekonsole, basierend auf einem ESP32, entwickelt werden. Die Sp
 - [Library MPU605069](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn69.zip)
 - [Library bitluni_ESP32Lib](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/bitluni_ESP32Lib.zip), [github bitluni ESP32lib](https://github.com/bitluni/ESP32Lib)
 
-Nach der installation der Arduino IDE, müssen die Librarys installiert werden. Hierfür kann in der IDE unter *Sketch -> Include Library -> Add .ZIP Library* die verlinkten Zip-Librarys installiert werden.
+Nach der installation der Arduino IDE, müssen die Librarys installiert werden. Hierfür kann in der IDE unter ```Sketch -> Include Library -> Add .ZIP Library``` die verlinkten Zip-Librarys installiert werden.
+
+Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -> Board -> Boards Manager...``` "esp32 by Espressif Systems" installiert. Anschließend kann unter "Tools -> Board -> esp32" "ESP32 Dev Module" ausgewählt werden. Zum Hochladen des Codes muss nur noch unter ```Tools -> Port``` der angeschlossene ESP32-Port eingestellt werden.
 
 ### Hardware
 
