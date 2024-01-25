@@ -78,8 +78,8 @@ void loop(){
 ```
 
 ### Pong Code
-Den zu grundeliegenden *Game Loop* und die *draw_player_paddle*-Funktion des Spiels entnehmten wir aus [diesem Projekt](https://github.com/nickbild/pico_pong).
-Hieraus ergab sich die **Ball_Bewegung**-Funktion:
+Als grundlage deinte [dieses Projekt](https://github.com/nickbild/pico_pong). Hierruas wurde der grundeliegendene *Game Loop* und die *draw_player_paddle*-Funktion entnommen.
+Daraus entstant die **Ball_Bewegung**-Funktion:
 ```
 void Ball_Bewegung(){
 //Links
@@ -112,10 +112,28 @@ void Ball_Bewegung(){
   vga.fillEllipse(ball_x, ball_y, radius, radius, vga.RGB(255, 255, 255));
 }
 ```
-Erweitert wurde:
 - Zufall-Funktion: verändert die Ballbewegung bei einer Berührung sehr unwahrscheinlich
 - tone-Funktiion: erzeugt über einen Piper abprall Geräusche des Balls
 - vga.fillEllipse-Funktion: erstellt das Bild des Balls
+
+Zudem entstant die **draw_player_paddle1**-Funktion, sowie die **draw_player_paddle2**-Funktion.
+```
+void draw_player_paddle1() {
+  if (KI1_Zustand = 0) {
+    Variation_1 = random(-2, 3)* H_Schlaeger;
+    KI1_Zustand = 1;
+  }
+  //KI1
+  if (Spielmodus1 == true && vx < 0) { 
+    if (ball_y > p1_y + Variation_1) p1_y = p1_y + 1;
+    else if (ball_y < p1_y + Variation_1) p1_y = p1_y - 1; 
+  }
+  //Oben & Unten-Problematik  
+  if (p1_y < 11) p1_y = 11;
+  if (p1_y > 190) p1_y = 190;
+  vga.fillRect(p1_x, p1_y, B_Schlaeger, H_Schlaeger, vga.RGB(255, 255, 255));
+}
+```
 
 ### MPU6050 Steuerung
 Genutzte Libary: [MPU6050_tockn](https://github.com/Tockn/MPU6050_tockn)
