@@ -2,8 +2,7 @@
 ## Aufgabenstellung
 Es soll eine Spielekonsole, basierend auf einem ESP32, entwickelt werden. Die Spielersteuerung erfolgt über zwei Lagesensoren (MPU6050). Die Ausgabe erfolgt über ein Monitor, der über VGA angesteurt wird.
 
-## Umsetzung
-### Software Installation
+## Software Installation
 - [Arduino IDE](https://www.arduino.cc/en/software)
 - [Library MPU6050](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn.zip), [github Library MPU6050](https://github.com/Tockn/MPU6050_tockn)
 - [Library MPU605069](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn69.zip)
@@ -13,7 +12,7 @@ Nach der installation der Arduino IDE, müssen die Librarys installiert werden. 
 
 Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -> Board -> Boards Manager...``` "esp32 by Espressif Systems" installiert. Anschließend kann unter ```Tools -> Board -> esp32``` "ESP32 Dev Module" ausgewählt werden. Zum Hochladen des [PONG.ino](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/PONG.ino)-Codes muss nur noch unter ```Tools -> Port``` der angeschlossene ESP32-Port eingestellt werden.
 
-### Hardware
+## Hardware
 Benötigt wird
 
 - [ESP32-Entwicklerboard](https://www.reichelt.de/nodemcu-esp32-wifi-und-bluetooth-modul-debo-jt-esp32-p219897.html?&trstct=pos_0&nbc=1)
@@ -29,7 +28,7 @@ Die Bildübertragung benötigt 6 Ardern (R, G, B, V-Syc, H-Syc, GRD). Diese kön
 
 Alternativ kann das VGA-Kabel direkt verlötet werden, hierbei bietet es sich an, die Ardern mit einer Durchgangsprüfung zu bestimmen.
 
-#### Schaltplan:
+### Schaltplan:
 Alle Komponten müssen wie im dargestellten Schaltplan verbunden werden.
 
 
