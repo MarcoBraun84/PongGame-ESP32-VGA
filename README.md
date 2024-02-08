@@ -38,7 +38,19 @@ Die Lagesensoren werden über einen I2C-Bus verbunden.
 
 ### 3D-Druck: Gehäuse, Kontroller
 
-Grundidee für das designen der Gehäuse ist ein komplett modualres Konzept, um alle Bauteile bei anderer Verwendung wiederzunutzen. Zudem sollten keine Schrauben zur Montage nötig sein.
+Grundidee für das designen der Gehäuse ist ein komplett modualres Konzept, um alle Bauteile bei anderer Verwendung wiederzunutzen. Zudem sollten keine Schrauben zur Montage nötig sein. Hierfür wurden im Case Halterungen für Piper und ESP32 eingeplant. Im Deckel wurden passende Aussparungen für die Knöpfe gelassen, die zudem mit ein innenliegenden Steck versehen, um das durchrusutschen zu unterbinden. 
+
+Die Modelle benötigen folgende Druckeinstellungen:
+
+```
+Rafts:No
+Supports:No
+Infill:10%
+Filament: PLA
+Nozzel: 0.4 mm
+Layer height: 0.2
+Wall Line Count: 3
+```
 
 #### Gehäuse:
 ![Gehäuse Konsole](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7bbf8f2c-fc84-4adc-a0d5-0c7b5efcb596)
@@ -54,7 +66,7 @@ Grundidee für das designen der Gehäuse ist ein komplett modualres Konzept, um 
 ## Zusätzliche Codeerklärung
 
 ### VGA Monitor Ausgabe
-Hierfür wurde die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) genutzt.
+Die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) ermöglicht hier eine 3Bit Monitorausgabe. Mit unserem ESP32, ist die höchstmögliche Auflösung 320x240 Pixel. Weiter Möglichkeiten der LGitHub.
 Um diese grundlegend nutzen zu können, sind folgende Befehle nötig:  
 
 ```
@@ -82,7 +94,7 @@ void loop(){
 
 ### Pong Code
 Als grundlage deinte [dieses Projekt](https://github.com/nickbild/pico_pong). Hierruas wurde der grundeliegendene *Game Loop* und die *draw_player_paddle*-Funktion entnommen.
-Daraus entstant die **Ball_Bewegung**-Funktion:
+Daraus entstant zum einen die **Ball_Bewegung**-Funktion:
 ```
 void Ball_Bewegung(){
 //Links
@@ -119,7 +131,7 @@ void Ball_Bewegung(){
 - tone-Funktiion: erzeugt über einen Piper abprall Geräusche des Balls
 - vga.fillEllipse-Funktion: erstellt das Bild des Balls
 
-Zudem entstant die **draw_player_paddle1**-Funktion, sowie die **draw_player_paddle2**-Funktion.
+Zum anderen entstant die **draw_player_paddle1**-Funktion, sowie die **draw_player_paddle2**-Funktion.
 ```
 void draw_player_paddle1() {
   if (KI1_Zustand = 0) {
