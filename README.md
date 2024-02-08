@@ -175,5 +175,20 @@ Serial.println(mpu60502.getAngleX());
 mpu60502.update();
 ```
 ### Knopf-Funktion bzw. debouncing
-
-https://docs.arduino.cc/built-in-examples/digital/Debounce
+Für die drei Knöpfe wurde mit Hilfe [dieser Anleitung](https://docs.arduino.cc/built-in-examples/digital/Debounce
+) eine debounce-Funktion erstellt, die einen klaren Knopfdruck ermöglicht.
+```
+  int reading[] = {digitalRead(buttonPin[0]), digitalRead(buttonPin[1]), digitalRead(buttonPin[2])};
+  for (int i = 0; i < 3; i++) {
+    if (reading[i] != lastButtonState[i]) lastDebounceTime[i] = millis();
+    if ((millis() - lastDebounceTime[i]) > debounceDelay) {
+      if (reading[i] != buttonState[i]) {
+        buttonState[i] = reading[i];
+        if (buttonState[0] == HIGH) Spielmodus1 = !Spielmodus1;
+        if (buttonState[1] == HIGH) Spielmodus2 = !Spielmodus2;
+        if (buttonState[2] == HIGH) Pause = !Pause;
+      }
+    }
+    lastButtonState[i] = reading[i];
+  }
+```
