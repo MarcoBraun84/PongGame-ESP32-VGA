@@ -1,6 +1,6 @@
 # pong-esp32-vga
-## Aufgabenstellung
-Es soll eine Spielekonsole, basierend auf einem ESP32, entwickelt werden. Die Spielersteuerung erfolgt über zwei Lagesensoren (MPU6050). Die Ausgabe erfolgt über ein Monitor, der über VGA angesteurt wird.
+Es soll eine PONG-Spielekonsole entwickelt werden die für zwei Spiler ausgelegt ist und auf einem ESP32 basiert. Die Spielersteuerung erfolgt über zwei Lagesensoren (MPU6050). Drei Funktionsknöpfe ermöglichen 
+das Spiel zu pausieren und die KI1 bzw. KI2 ein- oder auszuschalten. Die Ausgabe erfolgt über ein Monitor, der über VGA angesteurt wird. Spielgeräusche, wie Ballaufprallgeräusche und Punktemedlodie, werden über ein Piezo erzeugt.
 
 ## Software Installation
 - [Arduino IDE](https://www.arduino.cc/en/software)
@@ -20,11 +20,10 @@ Benötigt wird
 - [Jumper Kabel / Steckbrückenkabel](https://www.reichelt.de/entwicklerboards-steckbrueckenkabel-20cm-3x-20-kabel-debo-kabelset8-p280591.html?&trstct=pos_2&nbc=1)
 - [VGA-Kabel](https://www.reichelt.de/vga-monitor-kabel-15-pol-vga-stecker-1-m-st-mxtmmhq1m-p274592.html?&trstct=vrt_pdn&nbc=1)
 - 3x [Knöpfe](https://www.kaufland.de/product/419690543/?utm_source=shopping&utm_medium=non-paid&utm_campaign=pricecomparison&sid=36742452)
+- [Piezo](https://www.reichelt.de/de/de/piezo-schallwandler-85-db-4-khz-summer-epm-121-p35927.html?&trstct=pos_0&nbc=1)
 
-Die Steuerung der Spieler erfolgt über die Lagesensoren. Über zwei Knöpfe wird der Spielmodus von Spiler 1 und Spieler 2 eingestellt (KI on/off). Der dritte Knopf paussiert bzw. setzt das Spiel fort.
-
-#### VGA-Kbael vorbereiten
-Die Bildübertragung benötigt 6 Ardern (R, G, B, V-Syc, H-Syc, GRD). Diese können durch Jumper-Kabel direkt vom VGA-Kabelstecker abgegriffen werden (siehe Bild).
+#### VGA-Kabel vorbereiten
+Die Bildübertragung benötigt 6 Ardern (R, G, B, V-Syc, H-Syc, GRD) des VGA-Kabels. Diese können durch Jumper-Kabel direkt vom VGA-Kabelstecker abgegriffen werden (siehe Bild).
 
 ![Screenshot 2023-12-20 233102](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7121787a-c713-4a21-82c4-fd71c8974b97)
 
