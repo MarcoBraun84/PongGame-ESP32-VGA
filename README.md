@@ -55,16 +55,12 @@ Layer height: 0.2
 Wall Line Count: 3
 ```
 
-#### Gehäuse:
-![Gehäuse Konsole](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7bbf8f2c-fc84-4adc-a0d5-0c7b5efcb596)
-![Gehäusedeckel Konsole](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/76756885-c001-4632-9bed-7917026a0189)
+#### Modelle:
+<img src="https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7bbf8f2c-fc84-4adc-a0d5-0c7b5efcb596" width="450">
+<img src="https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/76756885-c001-4632-9bed-7917026a0189" width="450">
 
-#### Kontroller Player 1: 
-![Kontroller 1](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/f1b671e0-d6c7-474e-93c1-5dd18ab367cc)
-
-#### Kontroller Player 2: 
-![Kontroller 2](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/ef02c4bd-ee9f-4f61-a6d0-01b6baf0824e)
-
+<img src="https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/f1b671e0-d6c7-474e-93c1-5dd18ab367cc" width="450">
+<img src="https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/ef02c4bd-ee9f-4f61-a6d0-01b6baf0824e" width="450">
 
 ## Zusätzliche Codeerklärung
 
