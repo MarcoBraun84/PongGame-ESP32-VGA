@@ -22,6 +22,7 @@ Benötigt wird
 - [Jumper Kabel / Steckbrückenkabel](https://www.reichelt.de/entwicklerboards-steckbrueckenkabel-20cm-3x-20-kabel-debo-kabelset8-p280591.html?&trstct=pos_2&nbc=1)
 - [VGA-Kabel](https://www.reichelt.de/vga-monitor-kabel-15-pol-vga-stecker-1-m-st-mxtmmhq1m-p274592.html?&trstct=vrt_pdn&nbc=1)
 - 3x [Knöpfe](https://www.kaufland.de/product/419690543/?utm_source=shopping&utm_medium=non-paid&utm_campaign=pricecomparison&sid=36742452)
+- 3x [10k Widerstände](https://www.reichelt.de/widerstand-kohleschicht-10-kohm-0207-250-mw-5--1-4w-10k-p1338.html)
 - [Piezo](https://www.reichelt.de/de/de/piezo-schallwandler-85-db-4-khz-summer-epm-121-p35927.html?&trstct=pos_0&nbc=1)
 
 #### VGA-Kabel vorbereiten
@@ -32,7 +33,8 @@ Die Bildübertragung benötigt 6 Ardern (R, G, B, V-Syc, H-Syc, GRD) des VGA-Kab
 Alternativ kann das VGA-Kabel direkt verlötet werden, hierbei bietet es sich an, die Ardern mit einer Durchgangsprüfung zu bestimmen.
 
 ### Schaltplan:
-Alle Komponten müssen wie im dargestellten Schaltplan verbunden werden.
+![image](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/b8120961-6081-4c1f-b739-13a7d91dd577)
+
 
 
 Die Lagesensoren werden über einen I2C-Bus verbunden. 
