@@ -41,7 +41,8 @@ Die Lagesensoren werden über einen I2C-Bus verbunden.
 
 ### 3D-Druck: Gehäuse, Kontroller
 
-Grundidee für das designen der Gehäuse ist ein komplett modualres Konzept, um alle Bauteile bei anderer Verwendung wiederzunutzen. Zudem sollten keine Schrauben zur Montage nötig sein. Hierfür wurden im Case Halterungen für Piper und ESP32 eingeplant. Im Deckel wurden passende Aussparungen für die Knöpfe gelassen, die zudem mit ein innenliegenden Steck versehen, um das durchrusutschen zu unterbinden. 
+Grundidee für das designen der Gehäuse ist ein komplett modualres Konzept, um alle Bauteile bei anderer Verwendung wiederzunutzen. Zudem sollten keine Schrauben zur Montage nötig sein. Hierfür wurden im Konsolengehäuse Halterungen für Piper und ESP32 eingeplant. Im Deckel wurden passende Aussparungen für die Knöpfe gelassen, die zudem mit ein innenliegenden Steck verstärkt wurden. Auf der Vorderseite befindet sich der PONG Schriftzug und die Spielerbezeichnung, die zugleich die Kontrollerzuordnung erleichert und die darüber liegenden Knöpfe (linker und rechter Knopf), die für den Spielermoduswechsel dienen, bezeichnen.
+Die Kontroller wurden eben so designt, das die MPUs in die Kontroller reingesteckt werden und selbständig halten.
 
 Die Modelle benötigen folgende Druckeinstellungen:
 
