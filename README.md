@@ -100,34 +100,31 @@ Als grundlage deinte [dieses Projekt](https://github.com/nickbild/pico_pong). Hi
 Daraus entstant zum einen die **Ball_Bewegung**-Funktion, die das Bewegungsverhalten, die Geräusche und die Darstellung übernimmt.
 ```
 void Ball_Bewegung(){
-//Links
-  if (ball_x - radius < B_Schlaeger) {
+  //Links
+  if (B_Schlaeger + radius > ball_x) {
     vx = vx * - 1;
     Zufall();
-//Punkt
-    if (ball_y > p1_y + H_Schlaeger) point_scored(2);
-    else if (ball_y + radius < p1_y) point_scored(2);
+    //Punkt P2
+    if (ball_y > p1_y + H_Schlaeger || ball_y + radius < p1_y) point_scored(2);
     else tone(speaker_out, 440, 10);
   }
-//Rechts
+  //Rechts
   if (ball_x + radius > p2_x) {
     vx = vx * - 1;
     Zufall();
-//Punkt
-    if (ball_y > p2_y + H_Schlaeger) point_scored(1);
-    else if (ball_y + radius < p2_y) point_scored(1);
+    //Punkt P1
+    if (ball_y > p2_y + H_Schlaeger || ball_y + radius < p2_y) point_scored(1);
     else tone(speaker_out, 440, 10);
   }
-//Unten&Oben
+  //Unten&Oben
   if (ball_y < 12 + radius || ball_y > 230 - radius) {
     vy = vy * -1;
     Zufall();
     tone(speaker_out, 500, 10);
   }
-//Bewegung
   ball_x = ball_x + vx;
   ball_y = ball_y + vy;
-  vga.fillEllipse(ball_x, ball_y, radius, radius, vga.RGB(255, 255, 255));
+  vga.fillEllipse(round(ball_x), round(ball_y), radius, radius, vga.RGB(255, 255, 255));
 }
 ```
 - Zufall-Funktion: verändert die Ballbewegung bei einer Berührung
@@ -161,7 +158,7 @@ Leider unterstützt diese keine Adressierung des MPU6050, wodurch mehrere MPUs n
 ```
 #include <MPU6050_tockn.h>
 #include <MPU6050_tockn69.h>
-
+-----
 MPU6050 mpu6050(Wire);
 MPU605069 mpu60502(Wire);
 Wire.begin();
@@ -169,14 +166,13 @@ mpu6050.begin();
 mpu6050.calcGyroOffsets(true);
 mpu60502.begin();
 mpu60502.calcGyroOffsets(true);
-
+----
 mpu6050.update();
 Serial.print("angleX : ");
 Serial.println(mpu6050.getAngleX());
-
+mpu60502.update();
 Serial.print("angleX2 : ");
 Serial.println(mpu60502.getAngleX());
-mpu60502.update();
 ```
 Hierbei wird zum Start der Konsole eine automatische Kalibrierung der MPUs vorgenommen.
 
