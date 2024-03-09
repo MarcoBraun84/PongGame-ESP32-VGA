@@ -1,6 +1,5 @@
 # pong-esp32-vga
-Es soll eine PONG-Spielekonsole entwickelt werden die für zwei Spiler ausgelegt ist und auf einem ESP32 basiert. Die Spielersteuerung erfolgt über zwei Lagesensoren (MPU6050). Drei Funktionsknöpfe ermöglichen 
-das Spiel zu pausieren und die KI1 bzw. KI2 ein- oder auszuschalten. Die Ausgabe erfolgt über ein Monitor, der über VGA angesteurt wird. Spielgeräusche, wie Ballaufprallgeräusche und Punktemedlodie, werden über ein Piezo erzeugt.
+Es soll eine PONG-Spielekonsole entwickelt werden die für zwei Spiler ausgelegt ist und auf einem ESP32 basiert. Die Spielersteuerung erfolgt über zwei Lagesensoren (MPU6050). Drei Funktionsknöpfe ermöglichen das Spiel zu pausieren und die KI1 bzw. KI2 ein- oder auszuschalten. Die Ausgabe erfolgt über ein Monitor, der über VGA angesteurt wird. Spielgeräusche, wie Ballaufprallgeräusche und Punktemedlodie, werden über ein Piezo erzeugt.
 
 ## Software Installation
 - [Arduino IDE](https://www.arduino.cc/en/software)
@@ -42,8 +41,8 @@ Die Lagesensoren werden über einen I2C-Bus verbunden.
 ### 3D-Druck: Gehäuse, Kontroller
 
 Grundidee für das designen der Gehäuse ist ein komplett modualres Konzept, um alle Bauteile bei anderer Verwendung wiederzunutzen. Zudem sollten keine Schrauben zur Montage nötig sein. 
-Hierfür wurden im Konsolengehäuse Halterungen für Piper und ESP32 eingeplant. Im Deckel wurden passende Aussparungen für die Knöpfe gelassen, die zudem mit ein innenliegenden Steck verstärkt wurden. Auf der Vorderseite befindet sich der PONG Schriftzug und die Spielerbezeichnung, die zugleich die Kontrollerzuordnung erleichert und die darüber liegenden Knöpfe (linker und rechter Knopf), die für den Spielermoduswechsel dienen, bezeichnen.
-Die Kontroller wurden eben so designt, das die MPUs in die Kontroller reingesteckt werden und selbständig halten.
+
+
 
 Die Modelle benötigen folgende Druckeinstellungen:
 
@@ -57,12 +56,15 @@ Layer height: 0.2
 Wall Line Count: 3
 ```
 
-#### Modelle:
+#### Konsolengehäuse
 <img src="https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7bbf8f2c-fc84-4adc-a0d5-0c7b5efcb596" width="450">
 <img src="https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/76756885-c001-4632-9bed-7917026a0189" width="450">
+Hierfür wurden im Konsolengehäuse Halterungen für Piper und ESP32 eingeplant. Im Deckel wurden passende Aussparungen für die Knöpfe gelassen, die zudem mit ein innenliegenden Steck verstärkt wurden. Auf der Vorderseite befindet sich der PONG Schriftzug und die Spielerbezeichnung, die zugleich die Kontrollerzuordnung erleichert und die darüber liegenden Knöpfe (linker und rechter Knopf), die für den Spielermoduswechsel dienen, bezeichnen.
 
 <img src="https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/f1b671e0-d6c7-474e-93c1-5dd18ab367cc" width="450">
 <img src="https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/ef02c4bd-ee9f-4f61-a6d0-01b6baf0824e" width="450">
+
+Die Kontroller wurden so designt, das die MPUs in die Kontroller reingesteckt werden können und selbständig halten. Diese ermöglichen dem Spieler einhändig auf dem Tisch oder mit beiden Händen in der Hand zu steuern. 
 
 ## Zusätzliche Codeerklärung
 
@@ -177,7 +179,7 @@ mpu60502.update();
 ```
 ### Knopf-Funktion bzw. debouncing
 Für die drei Knöpfe wurde mit Hilfe [dieser Anleitung](https://docs.arduino.cc/built-in-examples/digital/Debounce
-) eine debounce-Funktion erstellt, die einen klaren Knopfdruck ermöglicht.
+) eine erweiterte debounce-Funktion erstellt, die einen klaren Knopfdruck sicheerstellt.
 ```
   int reading[] = {digitalRead(buttonPin[0]), digitalRead(buttonPin[1]), digitalRead(buttonPin[2])};
   for (int i = 0; i < 3; i++) {
