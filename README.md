@@ -69,7 +69,7 @@ Die Kontroller wurden so designt, das die MPUs in die Kontroller reingesteckt we
 ## Zusätzliche Codeerklärung
 
 ### VGA Monitor Ausgabe
-Die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) ermöglicht hier eine 3Bit Monitorausgabe. Mit unserem ESP32, ist die höchstmögliche Auflösung 320x240 Pixel. Weiter Möglichkeiten der LGitHub.
+Die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) ermöglicht hier eine Monitorausgabe über VGA. Mit unserem ESP32 ist die höchstmögliche Auflösung von 320x240 Pixel möglich. 
 Um diese grundlegend nutzen zu können, sind folgende Befehle nötig:  
 
 ```
@@ -97,7 +97,7 @@ void loop(){
 
 ### Pong Code
 Als grundlage deinte [dieses Projekt](https://github.com/nickbild/pico_pong). Hierruas wurde der grundeliegendene *Game Loop* und die *draw_player_paddle*-Funktion entnommen.
-Daraus entstant zum einen die **Ball_Bewegung**-Funktion:
+Daraus entstant zum einen die **Ball_Bewegung**-Funktion, die das Bewegungsverhalten, die Geräusche und die Darstellung übernimmt.
 ```
 void Ball_Bewegung(){
 //Links
@@ -130,11 +130,12 @@ void Ball_Bewegung(){
   vga.fillEllipse(ball_x, ball_y, radius, radius, vga.RGB(255, 255, 255));
 }
 ```
-- Zufall-Funktion: verändert die Ballbewegung bei einer Berührung sehr unwahrscheinlich
+- Zufall-Funktion: verändert die Ballbewegung bei einer Berührung
 - tone-Funktiion: erzeugt über einen Piper abprall Geräusche des Balls
 - vga.fillEllipse-Funktion: erstellt das Bild des Balls
 
-Zum anderen entstant die **draw_player_paddle1**-Funktion, sowie die **draw_player_paddle2**-Funktion.
+Zum anderen entstant die **draw_player_paddle1**-Funktion, sowie die **draw_player_paddle2**-Funktion. Diese beinhalten die anschaltbaren "KIs", die Spielereingabe und die Darstellung.
+
 ```
 void draw_player_paddle1() {
   if (KI1_Zustand = 0) {
@@ -177,9 +178,10 @@ Serial.print("angleX2 : ");
 Serial.println(mpu60502.getAngleX());
 mpu60502.update();
 ```
+Hierbei wird zum Start der Konsole eine automatische Kalibrierung der MPUs vorgenommen.
+
 ### Knopf-Funktion bzw. debouncing
-Für die drei Knöpfe wurde mit Hilfe [dieser Anleitung](https://docs.arduino.cc/built-in-examples/digital/Debounce
-) eine erweiterte debounce-Funktion erstellt, die einen klaren Knopfdruck sicheerstellt.
+Für die drei Knöpfe wurde mit Hilfe [dieser Anleitung](https://docs.arduino.cc/built-in-examples/digital/Debounce) eine erweiterte debounce-Funktion erstellt, die einen klaren Knopfdruck sicheerstellt.
 ```
   int reading[] = {digitalRead(buttonPin[0]), digitalRead(buttonPin[1]), digitalRead(buttonPin[2])};
   for (int i = 0; i < 3; i++) {
