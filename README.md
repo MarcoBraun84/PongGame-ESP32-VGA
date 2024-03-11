@@ -179,7 +179,6 @@ Hierbei wird zum Start der Konsole eine automatische Kalibrierung der MPUs vorge
 ### Knopf-Funktion bzw. debouncing
 Für die drei Knöpfe wurde mit Hilfe [dieser Anleitung](https://docs.arduino.cc/built-in-examples/digital/Debounce) eine erweiterte debounce-Funktion erstellt, die einen klaren Knopfdruck sicheerstellt.
 ```
-<details>
   int reading[] = {digitalRead(buttonPin[0]), digitalRead(buttonPin[1]), digitalRead(buttonPin[2])};
   for (int i = 0; i < 3; i++) {
     if (reading[i] != lastButtonState[i]) lastDebounceTime[i] = millis();
@@ -193,5 +192,4 @@ Für die drei Knöpfe wurde mit Hilfe [dieser Anleitung](https://docs.arduino.cc
     }
     lastButtonState[i] = reading[i];
   }
-</details>
 ```
