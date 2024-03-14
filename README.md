@@ -1,11 +1,14 @@
 # pong-esp32-vga
-Es soll eine PONG-Spielekonsole entwickelt werden die für zwei Spiler ausgelegt ist und auf einem ESP32 basiert. Die Spielersteuerung erfolgt über zwei Lagesensoren (MPU6050). Drei Funktionsknöpfe ermöglichen das Spiel zu pausieren und die KI1 bzw. KI2 ein- oder auszuschalten. Die Ausgabe erfolgt über ein Monitor, der über VGA angesteurt wird. Spielgeräusche, wie Ballaufprallgeräusche und Punktemedlodie, werden über ein Piezo erzeugt.
+Es soll eine PONG-Spielekonsole entwickelt werden die für zwei Spiler ausgelegt ist und auf dem ESP32 Mikrokontroller basiert. 
+Ziel des Projektes ist, mithilfe von zwei Lagesensoren (MPU6050) das Spiel Pong auf einem über VGA angesteuerten Monitor gegeneinander spielen zu können.
+Drei Funktionsknöpfe ermöglichen, das Spiel zu pausieren und die KI1 bzw. KI2 ein- oder auszuschalten. 
+Über ein Piezo werden Spielgeräusche, wie Ballaufprallgeräusche und Punktemedlodie, erzeugt.
+
 
 ## Hardware
 <img align="right" src="https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/d2e03790-8c00-4ce0-8b58-bf102e5905b7" width="300">
 
-Benötigt wird
-
+Benötigt werden folgende Komponenten:
 - [ESP32-Entwicklerboard](https://www.reichelt.de/nodemcu-esp32-wifi-und-bluetooth-modul-debo-jt-esp32-p219897.html?&trstct=pos_0&nbc=1)
 - 2x [MPU6050-Lagesensor](https://www.reichelt.de/entwicklerboards-beschleunigung-gyroskop-3-achsen-mpu-6050-debo-hmc5883l-2-p282539.html?&trstct=pos_0&nbc=1)
 - [Jumper Kabel / Steckbrückenkabel](https://www.reichelt.de/entwicklerboards-steckbrueckenkabel-20cm-3x-20-kabel-debo-kabelset8-p280591.html?&trstct=pos_2&nbc=1)
@@ -14,12 +17,14 @@ Benötigt wird
 - 3x [10k Widerstände](https://www.reichelt.de/widerstand-kohleschicht-10-kohm-0207-250-mw-5--1-4w-10k-p1338.html)
 - [Piezo](https://www.reichelt.de/de/de/piezo-schallwandler-85-db-4-khz-summer-epm-121-p35927.html?&trstct=pos_0&nbc=1)
 
+
 #### VGA-Kabel vorbereiten
 Die Bildübertragung benötigt 6 Ardern (R, G, B, V-Syc, H-Syc, GRD) des VGA-Kabels, um ein Bild mit 3-Bit-Farbraum zu übertragen. Diese können durch Jumper-Kabel direkt vom VGA-Kabelstecker abgegriffen werden (siehe Bild).
 
 ![Screenshot 2023-12-20 233102](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7121787a-c713-4a21-82c4-fd71c8974b97)
 
 Oder man kann das VGA-Kabel direkt verlötet werden, hierbei bietet es sich an, die einzelnen Ardern mit einer Durchgangsprüfung zu bestimmen.
+
 
 ### Schaltplan:
 ![image](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/b8120961-6081-4c1f-b739-13a7d91dd577)
@@ -73,8 +78,8 @@ Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -
 
 
 ### VGA Monitor Ausgabe
-Die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) ermöglicht hier eine Monitorausgabe über VGA. Mit unserem ESP32 ist die höchstmögliche Auflösung von 320x240 Pixel möglich. 
-Um diese grundlegend nutzen zu können, sind folgende Befehle nötig:  
+Die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) ermöglicht hier die Monitorausgabe über VGA. Mit unserem ESP32 ist die höchstmögliche Auflösung von 320x240 Pixel möglich. 
+Um VGA-Ausgabe mit dieser Library grundlegend nutzen zu können, ist volgender Code nötig:  
 
 ```
 #include <ESP32Lib.h>
