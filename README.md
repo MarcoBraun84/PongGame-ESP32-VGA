@@ -76,9 +76,12 @@ Nach der installation der Arduino IDE, müssen die Librarys installiert werden, 
 
 Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -> Board -> Boards Manager...``` "esp32 by Espressif Systems" installiert. Anschließend kann unter ```Tools -> Board -> esp32``` "ESP32 Dev Module" ausgewählt werden. Zum Hochladen des [PONG.ino](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/PONG.ino)-Codes muss nur noch unter ```Tools -> Port``` der angeschlossene ESP32-Port eingestellt werden.
 
+
 ### Spielvariablenliste
 ```bool Spielfeldbegrenzung = 1```  bei Deaktivierung wird der Ball bei einem Punkt nicht "neu eingeworfen" sondern prallt vom linken bzw rechten Bildschirmrand ab
+
 ```bool Zufall_Ball = 0```  bei Aktivierung wird der Ball beim Abprallen zufällig seine Geschwindigkeit verändern
+
 
 ### VGA Monitor Ausgabe
 Die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) ermöglicht hier die Monitorausgabe über VGA. Mit unserem ESP32 ist die höchstmögliche Auflösung von 320x240 Pixel möglich. 
