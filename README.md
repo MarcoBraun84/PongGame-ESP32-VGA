@@ -48,14 +48,18 @@ Wall Line Count: 3
 
 Im Konsolengehäuse sind Halterungen für den ESP32 und einen Piper vorgesehen. 
 Auf der Vorderseite befindet sich mittig ein "PONG" Schriftzug und zwei kleinere Spielerbezeichnung, die für die passende Zuordnung der Kontroller und der darüber liegenden Funktionsknöpfe dienen.
-An den beiden Seitenflächen befinden sich die Kabelausgänge der beiden Kontroller. Auf der rechten Seite befindet sich zudem eine größere Aussparung für den ESP32 USB-C Anschluss, der zugleich auch als Stromversogung dient.
+An den beiden Seitenflächen befinden sich die Kabelausgänge der beiden Kontroller. 
+Auf der rechten Seite befindet sich zudem eine größere Aussparung für den ESP32 USB-C Anschluss, der zugleich auch als Stromversogung dient.
+Auf der Rückseite des Konsolengehäuses befindet sich VGA-Kabelausgang.
+Im Konsolendeckel wurden passende Aussparungen für die drei Knöpfe gelassen, die mit ein innenliegenden Steck verstärkt wurden. 
 
-Im Deckel wurden passende Aussparungen für die Knöpfe gelassen, die zudem mit ein innenliegenden Steck verstärkt wurden. 
 
 #### Kontrollergehäuse
 ![Kontroller 1   2 Konstruktion](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/eecbc13b-4946-4c29-8b26-13aabf4ab1f7)
 
-Die Kontroller wurden so designt, das die MPUs in die Kontroller reingesteckt werden können und selbständig halten. Diese ermöglichen dem Spieler einhändig auf dem Tisch oder mit beiden Händen in der Hand zu steuern. 
+Die Kontroller wurden so designt, das der MPU6050 in das Gehäuse reingesteckt werden kann und selbständig hälten. Auf der Oberseite befindet sich die Spielerbezeichnung P1 bzw P2.
+Die Kontroller-Form ermöglichen dem Spieler, den Kontroller einhändig auf dem Tisch oder zweihändig zu bedienen. 
+
 
 ## Software Installation
 - [Arduino IDE](https://www.arduino.cc/en/software)
@@ -66,6 +70,7 @@ Die Kontroller wurden so designt, das die MPUs in die Kontroller reingesteckt we
 Nach der installation der Arduino IDE, müssen die Librarys installiert werden, um den Code auszuführen. Hierfür kann in der IDE unter ```Sketch -> Include Library -> Add .ZIP Library``` die verlinkten Zip-Librarys installiert werden.
 
 Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -> Board -> Boards Manager...``` "esp32 by Espressif Systems" installiert. Anschließend kann unter ```Tools -> Board -> esp32``` "ESP32 Dev Module" ausgewählt werden. Zum Hochladen des [PONG.ino](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/PONG.ino)-Codes muss nur noch unter ```Tools -> Port``` der angeschlossene ESP32-Port eingestellt werden.
+
 
 ### VGA Monitor Ausgabe
 Die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) ermöglicht hier eine Monitorausgabe über VGA. Mit unserem ESP32 ist die höchstmögliche Auflösung von 320x240 Pixel möglich. 
