@@ -60,7 +60,8 @@ Im Konsolendeckel wurden passende Aussparungen für die drei Knöpfe gelassen, d
 
 
 #### Kontrollergehäuse
-![Kontroller 1   2 Konstruktion](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/eecbc13b-4946-4c29-8b26-13aabf4ab1f7)
+![Kontroller 1   2 Konstruktion + Real](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/218a894a-f1be-4176-b77e-7c4cac5f6a94)
+
 
 Die Kontroller wurden so designt, das der MPU6050 in das Gehäuse reingesteckt werden kann und selbständig hälten. Auf der Oberseite befindet sich die Spielerbezeichnung P1 bzw P2.
 Die Kontroller-Form ermöglichen dem Spieler, den Kontroller einhändig auf dem Tisch oder zweihändig zu bedienen. 
