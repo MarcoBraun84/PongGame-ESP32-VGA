@@ -47,13 +47,11 @@ Wall Line Count: 3
 ```
 
 #### Konsolengehäuse
-<img src="https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7bbf8f2c-fc84-4adc-a0d5-0c7b5efcb596" width="450">
-<img src="https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/76756885-c001-4632-9bed-7917026a0189" width="450">
+![Gehäuse Konsole + Deckel](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/79d7c0b8-aae6-45aa-bf49-9ed77179f16b)
 
 Hierfür wurden im Konsolengehäuse Halterungen für Piper und ESP32 eingeplant. Im Deckel wurden passende Aussparungen für die Knöpfe gelassen, die zudem mit ein innenliegenden Steck verstärkt wurden. Auf der Vorderseite befindet sich der PONG Schriftzug und die Spielerbezeichnung, die zugleich die Kontrollerzuordnung erleichert und die darüber liegenden Knöpfe (linker und rechter Knopf), die für den Spielermoduswechsel dienen, bezeichnen.
 
 #### Kontrollergehäuse
-
 ![Kontroller 1   2 Konstruktion](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/eecbc13b-4946-4c29-8b26-13aabf4ab1f7)
 
 Die Kontroller wurden so designt, das die MPUs in die Kontroller reingesteckt werden können und selbständig halten. Diese ermöglichen dem Spieler einhändig auf dem Tisch oder mit beiden Händen in der Hand zu steuern. 
