@@ -27,7 +27,8 @@ Oder man kann das VGA-Kabel direkt verlötet werden, hierbei bietet es sich an, 
 
 
 ### Schaltplan:
-![image](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/b8120961-6081-4c1f-b739-13a7d91dd577)
+![image](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/8d2e3ea4-9fd6-4a9b-865e-067f334ecc72)
+
 
 Die Lagesensoren werden über einen I2C-Bus verbunden. 
 
