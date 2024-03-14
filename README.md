@@ -24,15 +24,11 @@ Oder man kann das VGA-Kabel direkt verlötet werden, hierbei bietet es sich an, 
 ### Schaltplan:
 ![image](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/b8120961-6081-4c1f-b739-13a7d91dd577)
 
-
-
 Die Lagesensoren werden über einen I2C-Bus verbunden. 
 
+
 ### 3D-Druck: Gehäuse, Kontroller
-
-Grundidee für das designen der Gehäuse ist ein komplett modualres Konzept, um alle Bauteile bei anderer Verwendung wiederzunutzen. Zudem sollten keine Schrauben zur Montage nötig sein. 
-
-
+Ziel beim entwickeln der Konsolen- und Kontroller-Gehäuse war es, ein möglichst modulares Konzept zu verfolgen, um alle Bauteile bei anderer Nutzung wieder verwenden zu können. Zudem sollte die Gehäuse keine Schrauben für die Montage benötigen.
 
 Die Modelle benötigen folgende Druckeinstellungen:
 
@@ -46,10 +42,15 @@ Layer height: 0.2
 Wall Line Count: 3
 ```
 
+
 #### Konsolengehäuse
 ![Gehäuse Konsole + Deckel](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/79d7c0b8-aae6-45aa-bf49-9ed77179f16b)
 
-Hierfür wurden im Konsolengehäuse Halterungen für Piper und ESP32 eingeplant. Im Deckel wurden passende Aussparungen für die Knöpfe gelassen, die zudem mit ein innenliegenden Steck verstärkt wurden. Auf der Vorderseite befindet sich der PONG Schriftzug und die Spielerbezeichnung, die zugleich die Kontrollerzuordnung erleichert und die darüber liegenden Knöpfe (linker und rechter Knopf), die für den Spielermoduswechsel dienen, bezeichnen.
+Im Konsolengehäuse sind Halterungen für den ESP32 und einen Piper vorgesehen. 
+Auf der Vorderseite befindet sich mittig ein "PONG" Schriftzug und zwei kleinere Spielerbezeichnung, die für die passende Zuordnung der Kontroller und der darüber liegenden Funktionsknöpfe dienen.
+An den beiden Seitenflächen befinden sich die Kabelausgänge der beiden Kontroller. Auf der rechten Seite befindet sich zudem eine größere Aussparung für den ESP32 USB-C Anschluss, der zugleich auch als Stromversogung dient.
+
+Im Deckel wurden passende Aussparungen für die Knöpfe gelassen, die zudem mit ein innenliegenden Steck verstärkt wurden. 
 
 #### Kontrollergehäuse
 ![Kontroller 1   2 Konstruktion](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/eecbc13b-4946-4c29-8b26-13aabf4ab1f7)
