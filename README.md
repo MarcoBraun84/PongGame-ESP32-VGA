@@ -160,45 +160,51 @@ void draw_player_paddle1() {
 }
 ```
 
+
 ### MPU6050 Steuerung
 Genutzte Libary: [MPU6050_tockn](https://github.com/Tockn/MPU6050_tockn)
 Leider unterstützt diese keine Adressierung des MPU6050, wodurch mehrere MPUs nicht möglich sind. Lediglich durch dublizieren der Library und ändern der I2C-Adresse werden zwei MPUs ermöglicht. (AD0 mit 3,3V ändert die Adresse zu x069)
+Um die Funktion der beiden MPUs zu testen, kann der folgende Code verwendet werden. Hierbei werden über den Serial Monitor die Werte der X-Achsen-Auslenkung ausgegeben.
 
 ```
 #include <MPU6050_tockn.h>
 #include <MPU6050_tockn69.h>
------
-MPU6050 mpu6050(Wire);
-MPU605069 mpu60502(Wire);
-Wire.begin();
-mpu6050.begin();
-mpu6050.calcGyroOffsets(true);
-mpu60502.begin();
-mpu60502.calcGyroOffsets(true);
-----
-mpu6050.update();
-Serial.print("angleX : ");
-Serial.println(mpu6050.getAngleX());
-mpu60502.update();
-Serial.print("angleX2 : ");
-Serial.println(mpu60502.getAngleX());
+
+void setup(){
+  MPU6050 mpu6050(Wire);
+  MPU605069 mpu60502(Wire);
+  Wire.begin();
+  mpu6050.begin();
+  mpu6050.calcGyroOffsets(true);
+  mpu60502.begin();
+  mpu60502.calcGyroOffsets(true);
+
+void loop(){
+  mpu6050.update();
+  Serial.print("angleX : ");
+  Serial.println(mpu6050.getAngleX());
+  mpu60502.update();
+  Serial.print("angleX2 : ");
+  Serial.println(mpu60502.getAngleX());
+}
 ```
 Hierbei wird zum Start der Konsole eine automatische Kalibrierung der MPUs vorgenommen.
+
 
 ### Knopf-Funktion bzw. debouncing
 Für die drei Knöpfe wurde mit Hilfe [dieser Anleitung](https://docs.arduino.cc/built-in-examples/digital/Debounce) eine erweiterte debounce-Funktion erstellt, die einen klaren Knopfdruck sicheerstellt.
 ```
-  int reading[] = {digitalRead(buttonPin[0]), digitalRead(buttonPin[1]), digitalRead(buttonPin[2])};
-  for (int i = 0; i < 3; i++) {
-    if (reading[i] != lastButtonState[i]) lastDebounceTime[i] = millis();
-    if ((millis() - lastDebounceTime[i]) > debounceDelay) {
-      if (reading[i] != buttonState[i]) {
-        buttonState[i] = reading[i];
-        if (buttonState[0] == HIGH) Spielmodus1 = !Spielmodus1;
-        if (buttonState[1] == HIGH) Spielmodus2 = !Spielmodus2;
-        if (buttonState[2] == HIGH) Pause = !Pause;
-      }
+int reading[] = {digitalRead(buttonPin[0]), digitalRead(buttonPin[1]), digitalRead(buttonPin[2])};
+for (int i = 0; i < 3; i++) {
+  if (reading[i] != lastButtonState[i]) lastDebounceTime[i] = millis();
+  if ((millis() - lastDebounceTime[i]) > debounceDelay) {
+    if (reading[i] != buttonState[i]) {
+      buttonState[i] = reading[i];
+      if (buttonState[0] == HIGH) Spielmodus1 = !Spielmodus1;
+      if (buttonState[1] == HIGH) Spielmodus2 = !Spielmodus2;
+      if (buttonState[2] == HIGH) Pause = !Pause;
     }
-    lastButtonState[i] = reading[i];
   }
+  lastButtonState[i] = reading[i];
+}
 ```
