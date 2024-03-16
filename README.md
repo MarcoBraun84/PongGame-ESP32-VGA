@@ -168,8 +168,7 @@ void draw_player_paddle1() {
 
 
 ### MPU6050 Steuerung
-Genutzte Libary: [MPU6050_tockn](https://github.com/Tockn/MPU6050_tockn)
-Leider unterstützt diese keine Adressierung des MPU6050, wodurch mehrere MPUs nicht standardmäßig möglich sind. Lediglich durch dublizieren dieser Library und ändern der I2C-Adresse werden damit zwei MPUs ermöglicht. (AD0 mit 3,3V ändert die Adresse zu x069)
+Leider unterstützt die genutzte Libary [MPU6050_tockn](https://github.com/Tockn/MPU6050_tockn) keine Adressierung des MPU6050, wodurch mehrere MPUs nicht standardmäßig möglich sind. Lediglich durch dublizieren dieser Library und ändern der I2C-Adresse werden damit zwei MPUs ermöglicht. (AD0 mit 3,3V ändert die Adresse zu x069)
 Um die Funktion der beiden MPUs zu testen, kann der folgende Code verwendet werden. Hierbei werden über den Serial Monitor die Werte der X-Achsen-Auslenkung ausgegeben.
 
 ```
