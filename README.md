@@ -23,7 +23,7 @@ Die Bildübertragung benötigt 6 Ardern (R, G, B, V-Syc, H-Syc, GRD) des VGA-Kab
 
 ![Screenshot 2023-12-20 233102](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/7121787a-c713-4a21-82c4-fd71c8974b97)
 
-Oder man kann das VGA-Kabel direkt verlötet werden, hierbei bietet es sich an, die einzelnen Ardern mit einer Durchgangsprüfung zu bestimmen.
+Alternativ kann das VGA-Kabel direkt verlötet werden. Hierbei bietet es sich an, die einzelnen Ardern mit einer Durchgangsprüfung zu bestimmen.
 
 
 ### Schaltplan:
