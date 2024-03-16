@@ -117,8 +117,8 @@ void loop(){
 ```
 
 ### Pong Code
-Als grundlage deinte [dieses Projekt](https://github.com/nickbild/pico_pong). Hieraus wurde der zugrundeliegende *Game Loop* und die *draw_player_paddle*-Funktion entnommen.
-Daraus entstant zum einen die **Ball_Bewegung**-Funktion, die das Bewegungsverhalten, die Geräusche und die Darstellung übernimmt.
+Als Grundlage diente [dieses Projekt](https://github.com/nickbild/pico_pong). Hieraus wurde der zugrundeliegende *Game Loop* und die *draw_player_paddle*-Funktion entnommen.
+Daraus entstand die **Ball_Bewegung**-Funktion, die das Bewegungsverhalten, die Abprallgeräusche und die Darstellung des Balls übernimmt.
 ```
 void Ball_Bewegung(){
   //Links
@@ -152,7 +152,7 @@ void Ball_Bewegung(){
 - tone-Funktiion: erzeugt über einen Piper unterschiedliche Abprallgeräusche des Balls
 - vga.fillEllipse-Funktion: erstellt das Bild des Balls
 
-Zum anderen entstant die **draw_player_paddle1**-Funktion, sowie die **draw_player_paddle2**-Funktion. Diese beinhalten die anschaltbaren "KIs", die Spielereingabe und die Darstellung.
+Weiterhin entstand die **draw_player_paddle1**-Funktion, sowie die **draw_player_paddle2**-Funktion. Diese beinhalten die anschaltbaren "KIs", die Spielereingabe und die Darstellung.
 
 ```
 void draw_player_paddle1() {
@@ -174,7 +174,8 @@ void draw_player_paddle1() {
 
 
 ### MPU6050 Steuerung
-Leider unterstützt die genutzte Libary [MPU6050_tockn](https://github.com/Tockn/MPU6050_tockn) keine Adressierung des MPU6050, wodurch mehrere MPUs nicht standardmäßig möglich sind. Lediglich durch dublizieren dieser Library und ändern der I2C-Adresse werden damit zwei MPUs ermöglicht. (AD0 mit 3,3V ändert die Adresse zu x069)
+Leider unterstützt die genutzte Libary [MPU6050_tockn](https://github.com/Tockn/MPU6050_tockn) keine Adressierung des MPU6050, wodurch mehrere MPUs nicht standardmäßig möglich sind. Lediglich durch Dublizieren dieser Library und Ändern der I2C-Adresse werden damit zwei MPUs ermöglicht. (AD0 mit 3,3V ändert die Adresse zu x069 mit [MPU605069](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn69.zip))
+
 Um die Funktion der beiden MPUs zu testen, kann der folgende Code verwendet werden. Hierbei werden über den Serial Monitor die Werte der X-Achsen-Auslenkung ausgegeben.
 
 ```
