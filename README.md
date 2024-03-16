@@ -82,6 +82,8 @@ Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -
 
 ```bool Zufall_Ball = 0```  bei Aktivierung wird der Ball beim Abprallen zufällig seine Geschwindigkeit verändern
 
+```bool Spielmodus1 = 1```  bzw. ```bool Spielmodus2 = 1``` schaltet den KI-Spieler ein/aus; wird von den Funktionsknöpfen beeinflusst 
+
 
 ### VGA Monitor Ausgabe
 Um eine Bildausgabe über den mit VGA angesteuerten Monitor zu erreichen, wurde die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) verwendet. Mit unserem ESP32 ist eine maximale Auflösung von 320x240 Pixel möglich. 
