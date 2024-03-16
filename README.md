@@ -73,7 +73,7 @@ Die Kontroller-Form ermöglichen dem Spieler, den Kontroller einhändig auf dem 
 - [Library MPU605069](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn69.zip)
 - [Library bitluni_ESP32Lib](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/bitluni_ESP32Lib.zip), [github bitluni ESP32lib](https://github.com/bitluni/ESP32Lib)
 
-Nach der Installation der Arduino IDE, müssen die Librarys installiert werden, um den Code ausführen zukönnen. Hierfür kann in der IDE unter ```Sketch -> Include Library -> Add .ZIP Library``` die verlinkten Zip-Librarys installiert werden. Alternativ könnte man über ```Sketch -> Include Library -> Library Manger``` die Librarys gesucht und installiert werden (nciht MPU605069).
+Um den Game-Code zu kompilieren und zu übertragen muss die Arduino IDE installiert werdem. Nach der Installation der IDE, müssen die Librarys installiert werden, um den Code ausführen zukönnen. Hierfür kann in der IDE unter ```Sketch -> Include Library -> Add .ZIP Library``` die verlinkten Zip-Librarys installiert werden. Alternativ könnte man über ```Sketch -> Include Library -> Library Manger``` die Librarys gesucht und installiert werden (nciht MPU605069).
 
 Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -> Board -> Boards Manager...``` "esp32 by Espressif Systems" installiert. Anschließend kann unter ```Tools -> Board -> esp32``` "ESP32 Dev Module" ausgewählt werden. Zum Hochladen des [PONG.ino](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/PONG.ino)-Codes muss nur noch unter ```Tools -> Port``` der angeschlossene ESP32-Port eingestellt werden.
 
@@ -85,8 +85,8 @@ Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -
 
 
 ### VGA Monitor Ausgabe
-Die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) ermöglicht hier die Monitorausgabe über VGA. Mit unserem ESP32 ist die höchstmögliche Auflösung von 320x240 Pixel möglich. 
-Um VGA-Ausgabe mit dieser Library grundlegend nutzen zu können, ist volgender Code nötig:  
+Um eine Bildausgabe über den mit VGA angesteuerten Monitor zu erreichen, wurde die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) verwendet. Mit unserem ESP32 ist eine maximale Auflösung von 320x240 Pixel möglich. 
+Um eine beispielhafte VGA-Ausgabe mit dieser Library zu erzeugen, ist volgender Code nötig:  
 
 ```
 #include <ESP32Lib.h>
