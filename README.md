@@ -113,7 +113,7 @@ void loop(){
 ```
 
 ### Pong Code
-Als grundlage deinte [dieses Projekt](https://github.com/nickbild/pico_pong). Hierruas wurde der grundeliegendene *Game Loop* und die *draw_player_paddle*-Funktion entnommen.
+Als grundlage deinte [dieses Projekt](https://github.com/nickbild/pico_pong). Hierruas wurde der zugrundeliegende *Game Loop* und die *draw_player_paddle*-Funktion entnommen.
 Daraus entstant zum einen die **Ball_Bewegung**-Funktion, die das Bewegungsverhalten, die Geräusche und die Darstellung übernimmt.
 ```
 void Ball_Bewegung(){
@@ -144,8 +144,8 @@ void Ball_Bewegung(){
   vga.fillEllipse(round(ball_x), round(ball_y), radius, radius, vga.RGB(255, 255, 255));
 }
 ```
-- Zufall-Funktion: verändert die Ballbewegung bei einer Berührung
-- tone-Funktiion: erzeugt über einen Piper abprall Geräusche des Balls
+- Zufall-Funktion: verändert die Ballbewegung bei einem Abprall (```bool Zufall_Ball = 1```)
+- tone-Funktiion: erzeugt über einen Piper unterschiedliche Abprallgeräusche des Balls
 - vga.fillEllipse-Funktion: erstellt das Bild des Balls
 
 Zum anderen entstant die **draw_player_paddle1**-Funktion, sowie die **draw_player_paddle2**-Funktion. Diese beinhalten die anschaltbaren "KIs", die Spielereingabe und die Darstellung.
@@ -199,7 +199,7 @@ Hierbei wird zum Start der Konsole eine automatische Kalibrierung der MPUs vorge
 
 
 ### Knopf-Funktion bzw. debouncing
-Für die drei Knöpfe wurde mit Hilfe [dieser Anleitung](https://docs.arduino.cc/built-in-examples/digital/Debounce) eine erweiterte debounce-Funktion erstellt, die das Knopfsignal entprellt und damit ein klaren Knopfdruck sicheerstellt.
+Für die drei Knöpfe wurde mit Hilfe [dieser Anleitung](https://docs.arduino.cc/built-in-examples/digital/Debounce) eine erweiterte debounce-Funktion erstellt, die das Knopfsignal entprellt und damit ein klaren Knopfdruck sicher stellt.
 ```
 const int buttonPin[] = {19, 13, 2};
 int buttonState[] = {0, 0, 0}; 
