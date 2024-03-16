@@ -29,10 +29,10 @@ Alternativ kann das VGA-Kabel direkt verlötet werden. Hierbei bietet es sich an
 ### Schaltplan:
 ![image](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/f3d59562-bde2-493a-a981-77f30469e8db)
 
-Die Lagesensoren benötigen mindestens 3,3V Versorgungsspannung und werden über einen I2C-Bus (SDA, SCL) verbunden. Der zweite Lagesensor erhält zusätzlich 3,3V auf I2C-Adresspin (AD0), damti dieser eine andere Busadresse erhält. Die Knöpfe schalten auf dem HIGH-Zustand. Die Stromversorgung wird über den intergrierten USB-C Eingang des ESP32 sichergestellt.
+Die Lagesensoren benötigen mindestens 3,3V Versorgungsspannung und werden über einen I2C-Bus (SDA, SCL) verbunden. Der zweite Lagesensor erhält zusätzlich 3,3V auf den I2C-Adresspin (AD0), damti dieser eine andere Busadresse erhält. Die Knöpfe schalten auf den HIGH-Zustand. Die Stromversorgung wird über den integrierten USB-C Eingang des ESP32 sichergestellt.
 
-### 3D-Druck: Gehäuse, Kontroller
-Ziel beim entwickeln der Konsolen- und Kontroller-Gehäuse war es, ein möglichst modulares Konzept zu verfolgen, um alle Bauteile bei anderer Nutzung wieder verwenden zu können. Zudem sollte die Gehäuse keine Schrauben für die Montage benötigen.
+### 3D-Druck: Konsole, Kontroller
+Ziel beim Entwickeln der Konsolen- und Kontroller-Gehäuse war es, ein möglichst modulares Konzept zu verfolgen, um alle Bauteile bei anderer Nutzung wieder verwenden zu können. Zudem sollte das Gehäuse keine Schrauben für die Montage benötigen.
 
 Die [Modelle](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/3D-Druck%20Modelle.zip) benötigen folgende Druckeinstellungen:
 
@@ -72,9 +72,9 @@ Die Kontroller-Form ermöglicht dem Spieler, den Kontroller einhändig auf dem T
 - [Library MPU605069](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn69.zip)
 - [Library bitluni_ESP32Lib](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/bitluni_ESP32Lib.zip), [github bitluni ESP32lib](https://github.com/bitluni/ESP32Lib)
 
-Um den Game-Code zu kompilieren und zu übertragen muss die Arduino IDE installiert werdem. Nach der Installation der IDE, müssen die Librarys installiert werden, um den Code ausführen zukönnen. Hierfür kann in der IDE unter ```Sketch -> Include Library -> Add .ZIP Library``` die verlinkten Zip-Librarys installiert werden. Alternativ könnte man über ```Sketch -> Include Library -> Library Manger``` die Librarys gesucht und installiert werden (nicht die modifizierte MPU605069-Library).
+Um den Game-Code zu kompilieren und zu übertragen muss die Arduino IDE installiert werdem. Nach der Installation der IDE, müssen die Librarys installiert werden, um den Code ausführen zukönnen. Hierfür kann in der IDE unter ```Sketch -> Include Library -> Add .ZIP Library``` die verlinkten Zip-Librarys installiert werden. Alternativ könnte man über ```Sketch -> Include Library -> Library Manger``` die Librarys suchen und installieren (nicht die modifizierte MPU605069-Library).
 
-Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -> Board -> Boards Manager...``` "esp32 by Espressif Systems" installiert. Anschließend kann unter ```Tools -> Board -> esp32``` "ESP32 Dev Module" ausgewählt werden. Zum Hochladen des [PONG.ino](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/PONG.ino)-Codes muss nur noch unter ```Tools -> Port``` der angeschlossene ESP32-Port eingestellt werden.
+Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -> Board -> Boards Manager...``` "esp32 by Espressif Systems" gesucht und installiert. Anschließend kann unter ```Tools -> Board -> esp32``` "ESP32 Dev Module" ausgewählt werden. Zum Hochladen des [PONG.ino](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/PONG.ino)-Codes muss nur noch unter ```Tools -> Port``` der angeschlossene ESP32-Port eingestellt werden.
 
 
 ### Spielvariablenliste
@@ -148,9 +148,9 @@ void Ball_Bewegung(){
   vga.fillEllipse(round(ball_x), round(ball_y), radius, radius, vga.RGB(255, 255, 255));
 }
 ```
-- Zufall-Funktion: verändert die Ballbewegung bei einem Abprall (```bool Zufall_Ball = 1```)
-- tone-Funktiion: erzeugt über einen Piper unterschiedliche Abprallgeräusche des Balls
-- vga.fillEllipse-Funktion: erstellt das Bild des Balls
+- Zufall-Funktion: Verändert die Ballbewegung bei einem Abprall (```bool Zufall_Ball = 1```).
+- tone-Funktiion: Erzeugt über einen Piper unterschiedliche Abprallgeräusche des Balls.
+- vga.fillEllipse-Funktion: Erstellt das Bild des Balls.
 
 Weiterhin entstand die **draw_player_paddle1**-Funktion, sowie die **draw_player_paddle2**-Funktion. Diese beinhalten die anschaltbaren "KIs", die Spielereingabe und die Darstellung.
 
