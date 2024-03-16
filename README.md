@@ -117,7 +117,7 @@ void loop(){
 ```
 
 ### Pong Code
-Als grundlage deinte [dieses Projekt](https://github.com/nickbild/pico_pong). Hierruas wurde der zugrundeliegende *Game Loop* und die *draw_player_paddle*-Funktion entnommen.
+Als grundlage deinte [dieses Projekt](https://github.com/nickbild/pico_pong). Hieraus wurde der zugrundeliegende *Game Loop* und die *draw_player_paddle*-Funktion entnommen.
 Daraus entstant zum einen die **Ball_Bewegung**-Funktion, die das Bewegungsverhalten, die Geräusche und die Darstellung übernimmt.
 ```
 void Ball_Bewegung(){
