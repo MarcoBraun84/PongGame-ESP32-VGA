@@ -78,11 +78,11 @@ Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -
 
 
 ### Spielvariablenliste
-```bool Spielfeldbegrenzung = 1```  bei Deaktivierung wird der Ball bei einem Punkt nicht "neu eingeworfen" sondern prallt vom linken bzw rechten Bildschirmrand ab
+```bool Spielfeldbegrenzung = 1```: Bei Deaktivierung wird der Ball bei einem Treffer nicht "neu eingeworfen", sondern prallt vom linken bzw. rechten Bildschirmrand ab.
 
-```bool Zufall_Ball = 0```  bei Aktivierung wird der Ball beim Abprallen zufällig seine Geschwindigkeit verändern
+```bool Zufall_Ball = 0```: Bei Aktivierung wird der Ball beim Abprallen zufällig seine Geschwindigkeit ändern.
 
-```bool Spielmodus1 = 1```  bzw. ```bool Spielmodus2 = 1``` schaltet den KI-Spieler ein/aus; wird von den Funktionsknöpfen beeinflusst 
+```bool Spielmodus1 = 1``` bzw. ```bool Spielmodus2 = 1```: Schaltet den "KI"-Spieler ein bzw. aus und wird von den jeweiligen Funktionsknöpfen beeinflusst. 
 
 
 ### VGA Monitor Ausgabe
