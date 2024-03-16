@@ -54,8 +54,8 @@ Im Konsolengehäuse sind Halterungen für den ESP32 und einen Piper vorgesehen.
 Auf der Vorderseite befindet sich mittig ein "PONG" Schriftzug und zwei kleinere Spielerbezeichnung, die für die passende Zuordnung der Kontroller und der darüber liegenden Funktionsknöpfe dienen.
 An den beiden Seitenflächen befinden sich die Kabelausgänge der beiden Kontroller. 
 Auf der rechten Seite befindet sich zudem eine größere Aussparung für den ESP32 USB-C Anschluss, der zugleich auch als Stromversogung dient.
-Auf der Rückseite des Konsolengehäuses befindet sich VGA-Kabelausgang.
-Im Konsolendeckel wurden passende Aussparungen für die drei Knöpfe gelassen, die mit ein innenliegenden Steck verstärkt wurden. 
+Auf der Rückseite des Konsolengehäuses befindet sich der VGA-Kabelausgang.
+Im Konsolendeckel wurden passende Aussparungen für die drei Knöpfe gelassen, die mit einem innenliegenden Steg verstärkt wurden. 
 
 
 #### Kontrollergehäuse
