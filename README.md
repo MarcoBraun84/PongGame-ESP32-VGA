@@ -30,7 +30,8 @@ Oder man kann das VGA-Kabel direkt verlötet werden, hierbei bietet es sich an, 
 ![image](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/f3d59562-bde2-493a-a981-77f30469e8db)
 
 Die Lagesensoren benötigen mindestens 3,3V Versorgungsspannung und werden über einen I2C-Bus (SDA, SCL) verbunden. Der zweite Lagesensor erhält zusätzlich 3,3V auf I2C-Adresspin (AD0), damti dieser eine andere Busadresse erhält.
-Die Knöpfe benötigen je Spannung, Ground und GPIO zum ESP32.
+
+Die Knöpfe schalten auf HIGH.
 
 ### 3D-Druck: Gehäuse, Kontroller
 Ziel beim entwickeln der Konsolen- und Kontroller-Gehäuse war es, ein möglichst modulares Konzept zu verfolgen, um alle Bauteile bei anderer Nutzung wieder verwenden zu können. Zudem sollte die Gehäuse keine Schrauben für die Montage benötigen.
