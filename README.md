@@ -29,7 +29,7 @@ Oder man kann das VGA-Kabel direkt verlötet werden, hierbei bietet es sich an, 
 ### Schaltplan:
 ![image](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/f3d59562-bde2-493a-a981-77f30469e8db)
 
-Die Lagesensoren benötigen mindestens 3,3V Versorgungsspannung und werden über einen I2C-Bus (SDA, SCL) verbunden. Der zweite Lagesensor erhält zusätzlich 3,3V auf I2C-Adresspin (AD0), damti dieser eine andere Busadresse erhält. Die Knöpfe schalten auf dem HIGH-Zustand. Die Stromversorgung wird über den intergrierten USB-C Eingang des ESP32 sichergesllt.
+Die Lagesensoren benötigen mindestens 3,3V Versorgungsspannung und werden über einen I2C-Bus (SDA, SCL) verbunden. Der zweite Lagesensor erhält zusätzlich 3,3V auf I2C-Adresspin (AD0), damti dieser eine andere Busadresse erhält. Die Knöpfe schalten auf dem HIGH-Zustand. Die Stromversorgung wird über den intergrierten USB-C Eingang des ESP32 sichergestellt.
 
 ### 3D-Druck: Gehäuse, Kontroller
 Ziel beim entwickeln der Konsolen- und Kontroller-Gehäuse war es, ein möglichst modulares Konzept zu verfolgen, um alle Bauteile bei anderer Nutzung wieder verwenden zu können. Zudem sollte die Gehäuse keine Schrauben für die Montage benötigen.
@@ -72,7 +72,7 @@ Die Kontroller-Form ermöglichen dem Spieler, den Kontroller einhändig auf dem 
 - [Library MPU605069](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn69.zip)
 - [Library bitluni_ESP32Lib](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/bitluni_ESP32Lib.zip), [github bitluni ESP32lib](https://github.com/bitluni/ESP32Lib)
 
-Um den Game-Code zu kompilieren und zu übertragen muss die Arduino IDE installiert werdem. Nach der Installation der IDE, müssen die Librarys installiert werden, um den Code ausführen zukönnen. Hierfür kann in der IDE unter ```Sketch -> Include Library -> Add .ZIP Library``` die verlinkten Zip-Librarys installiert werden. Alternativ könnte man über ```Sketch -> Include Library -> Library Manger``` die Librarys gesucht und installiert werden (nciht MPU605069).
+Um den Game-Code zu kompilieren und zu übertragen muss die Arduino IDE installiert werdem. Nach der Installation der IDE, müssen die Librarys installiert werden, um den Code ausführen zukönnen. Hierfür kann in der IDE unter ```Sketch -> Include Library -> Add .ZIP Library``` die verlinkten Zip-Librarys installiert werden. Alternativ könnte man über ```Sketch -> Include Library -> Library Manger``` die Librarys gesucht und installiert werden (nicht die modifizierte MPU605069-Library).
 
 Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -> Board -> Boards Manager...``` "esp32 by Espressif Systems" installiert. Anschließend kann unter ```Tools -> Board -> esp32``` "ESP32 Dev Module" ausgewählt werden. Zum Hochladen des [PONG.ino](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/PONG.ino)-Codes muss nur noch unter ```Tools -> Port``` der angeschlossene ESP32-Port eingestellt werden.
 
@@ -169,7 +169,7 @@ void draw_player_paddle1() {
 
 ### MPU6050 Steuerung
 Genutzte Libary: [MPU6050_tockn](https://github.com/Tockn/MPU6050_tockn)
-Leider unterstützt diese keine Adressierung des MPU6050, wodurch mehrere MPUs nicht möglich sind. Lediglich durch dublizieren der Library und ändern der I2C-Adresse werden zwei MPUs ermöglicht. (AD0 mit 3,3V ändert die Adresse zu x069)
+Leider unterstützt diese keine Adressierung des MPU6050, wodurch mehrere MPUs nicht standardmäßig möglich sind. Lediglich durch dublizieren dieser Library und ändern der I2C-Adresse werden damit zwei MPUs ermöglicht. (AD0 mit 3,3V ändert die Adresse zu x069)
 Um die Funktion der beiden MPUs zu testen, kann der folgende Code verwendet werden. Hierbei werden über den Serial Monitor die Werte der X-Achsen-Auslenkung ausgegeben.
 
 ```
