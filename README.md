@@ -35,7 +35,7 @@ Die Knöpfe benötigen je Spannung, Ground und GPIO zum ESP32.
 ### 3D-Druck: Gehäuse, Kontroller
 Ziel beim entwickeln der Konsolen- und Kontroller-Gehäuse war es, ein möglichst modulares Konzept zu verfolgen, um alle Bauteile bei anderer Nutzung wieder verwenden zu können. Zudem sollte die Gehäuse keine Schrauben für die Montage benötigen.
 
-Die Modelle benötigen folgende Druckeinstellungen:
+Die [Modelle](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/3D-Druck%20Modelle.zip) benötigen folgende Druckeinstellungen:
 
 ```
 Rafts:No
