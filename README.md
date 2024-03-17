@@ -1,4 +1,4 @@
-# pong-esp32-vga
+# PongGame-ESP32-VGA
 Es soll eine PONG-Spielekonsole entwickelt werden die für zwei Spieler ausgelegt ist und auf dem ESP32 Mikrokontroller basiert. 
 Ziel des Projektes ist, mithilfe von zwei Lagesensoren (MPU6050) das Spiel Pong auf einem über VGA angesteuerten Monitor gegeneinander spielen zu können.
 Drei Funktionsknöpfe ermöglichen, das Spiel zu pausieren und die KI1 bzw. KI2 ein- oder auszuschalten. 
