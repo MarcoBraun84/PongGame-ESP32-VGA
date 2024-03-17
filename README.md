@@ -82,7 +82,7 @@ Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -
 
 ```bool Zufall_Ball = 0```: Bei Aktivierung wird der Ball beim Abprallen zufällig seine Geschwindigkeit ändern.
 
-```bool Spielmodus1 = 1``` bzw. ```bool Spielmodus2 = 1```: Schaltet den "KI"-Spieler ein bzw. aus und wird von den jeweiligen Funktionsknöpfen beeinflusst. 
+```bool Spielmodus1 = 1``` bzw. ```bool Spielmodus2 = 1```: Schaltet den KI-Spieler ein bzw. aus und wird von den jeweiligen Funktionsknöpfen beeinflusst. 
 
 
 ### VGA Monitor Ausgabe
