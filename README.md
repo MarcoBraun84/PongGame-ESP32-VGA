@@ -88,7 +88,7 @@ Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -
 ### VGA Monitor Ausgabe
 Um eine Bildausgabe über den mit VGA angesteuerten Monitor zu erreichen, wurde die Libary [bitluni ESP32lib](https://github.com/bitluni/ESP32Lib) verwendet. Mit unserem ESP32 ist eine maximale Auflösung von 320x240 Pixel möglich. 
 
-Um beispielhafte ein Pong-Schriftzug über VGA auszugeben ist folgender Code nötig:  
+Um beispielhaft einen Pong-Schriftzug über VGA auszugeben ist folgender Code nötig:  
 
 ```
 #include <ESP32Lib.h>
