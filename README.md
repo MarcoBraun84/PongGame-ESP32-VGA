@@ -109,9 +109,9 @@ vga.init(myMode, redPin, greenPin, bluePin, hsyncPin, vsyncPin);
 void loop(){
   vga.clear(0);
   vga.setFont(CodePage437_8x19);
-	vga.setCursor(vga.xres/2-35, vga.yres/2-10);
-	vga.setTextColor(vga.RGB(255,0,0));
-	vga.print("Pong Game!");
+  vga.setCursor(vga.xres/2-35, vga.yres/2-10);
+  vga.setTextColor(vga.RGB(255,0,0));
+  vga.print("Pong Game!");
   vga.show();
 }
 ```
