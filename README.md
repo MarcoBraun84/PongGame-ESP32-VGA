@@ -1,4 +1,6 @@
 # pong-esp32-vga
+<img align="right" src="https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/d2e03790-8c00-4ce0-8b58-bf102e5905b7" width="300">
+
 Es soll eine PONG-Spielekonsole entwickelt werden die für zwei Spiler ausgelegt ist und auf dem ESP32 Mikrokontroller basiert. 
 Ziel des Projektes ist, mithilfe von zwei Lagesensoren (MPU6050) das Spiel Pong auf einem über VGA angesteuerten Monitor gegeneinander spielen zu können.
 Drei Funktionsknöpfe ermöglichen, das Spiel zu pausieren und die KI1 bzw. KI2 ein- oder auszuschalten. 
@@ -6,7 +8,6 @@ Drei Funktionsknöpfe ermöglichen, das Spiel zu pausieren und die KI1 bzw. KI2 
 
 
 ## Hardware
-<img align="right" src="https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/d2e03790-8c00-4ce0-8b58-bf102e5905b7" width="300">
 
 Benötigt werden folgende Komponenten:
 - [ESP32-Entwicklerboard](https://www.reichelt.de/nodemcu-esp32-wifi-und-bluetooth-modul-debo-jt-esp32-p219897.html?&trstct=pos_0&nbc=1)
