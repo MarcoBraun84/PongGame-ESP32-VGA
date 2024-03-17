@@ -152,7 +152,7 @@ void Ball_Bewegung(){
 - tone-Funktion: Erzeugt über einen Piezo unterschiedliche Abprallgeräusche des Balls.
 - vga.fillEllipse-Funktion: Erstellt das Bild des Balls.
 
-Weiterhin entstand die **draw_player_paddle1**-Funktion, sowie die **draw_player_paddle2**-Funktion. Diese beinhalten die anschaltbaren "KIs", die Spielereingabe und die Darstellung.
+Weiterhin entstand die **draw_player_paddle1**-Funktion, sowie die **draw_player_paddle2**-Funktion. Diese beinhalten die anschaltbaren KIs, die Spielereingabe und die Darstellung.
 
 ```
 void draw_player_paddle1() {
