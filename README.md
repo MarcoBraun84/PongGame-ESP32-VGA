@@ -145,7 +145,7 @@ void Ball_Bewegung(){
   }
   ball_x = ball_x + vx;
   ball_y = ball_y + vy;
-  vga.fillEllipse(round(ball_x), round(ball_y), radius, radius, vga.RGB(255, 255, 255));
+  vga.fillEllipse(ball_x, ball_y, radius, radius, vga.RGB(255, 255, 255));
 }
 ```
 - Zufall-Funktion: Verändert die Ballbewegung bei einem Abprall (```bool Zufall_Ball = 1```).
