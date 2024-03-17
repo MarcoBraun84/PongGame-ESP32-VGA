@@ -174,7 +174,7 @@ void draw_player_paddle1() {
 
 
 ### MPU6050 Steuerung
-Leider unterstützt die genutzte Library [MPU6050_tockn](https://github.com/Tockn/MPU6050_tockn) keine Adressierung des MPU6050, wodurch mehrere MPUs nicht standardmäßig möglich sind. Lediglich durch Dublizieren dieser Library und Ändern der I2C-Adresse werden damit zwei MPUs ermöglicht (AD0 mit 3,3V ändert die Adresse zu x069 mit [MPU605069](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn69.zip)).
+Leider unterstützt die genutzte Library [MPU6050_tockn](https://github.com/Tockn/MPU6050_tockn) keine Adressierung des MPU6050, wodurch mehrere MPUs nicht standardmäßig möglich sind. Lediglich durch Dublizieren dieser Library und Ändern der I2C-Adresse werden damit zwei MPUs ermöglicht (AD0 mit 3,3 V ändert die Adresse zu x069 mit [MPU605069-Library](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn69.zip)).
 
 Um die Funktion der beiden MPUs zu testen, kann der folgende Code verwendet werden. Hierbei werden über den Serial Monitor die Werte der X-Achsen-Auslenkung ausgegeben.
 
