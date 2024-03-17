@@ -21,9 +21,9 @@ Benötigt werden folgende Komponenten:
 #### VGA-Kabel vorbereiten
 Die Bildübertragung benötigt 6 Ardern (R, G, B, V-Syc, H-Syc, GRD) des VGA-Kabels, um ein Bild mit 3-Bit-Farbraum zu übertragen. Diese können durch Jumper-Kabel direkt vom VGA-Kabelstecker abgegriffen werden (siehe Bild).
 
-![](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/Pinbelegungjpg.jpg)
-
 Alternativ kann das VGA-Kabel direkt verlötet werden. Hierbei bietet es sich an, die einzelnen Ardern mit einer Durchgangsprüfung zu bestimmen.
+
+![](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/Pinbelegungjpg.jpg)
 
 
 ### Schaltplan:
