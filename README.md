@@ -50,7 +50,7 @@ Wall Line Count: 3
 #### Konsolengehäuse
 ![Gehäuse Konsole + Deckel](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/assets/117396763/79d7c0b8-aae6-45aa-bf49-9ed77179f16b)
 
-Im Konsolengehäuse sind Halterungen für den ESP32 und einen Piper vorgesehen. 
+Im Konsolengehäuse sind Halterungen für den ESP32 und einen Piezo vorgesehen. 
 Auf der Vorderseite befindet sich mittig ein "PONG" Schriftzug und zwei kleinere Spielerbezeichnung, die für die passende Zuordnung der Kontroller und der darüber liegenden Funktionsknöpfe dienen.
 An den beiden Seitenflächen befinden sich die Kabelausgänge der beiden Kontroller. 
 Auf der rechten Seite befindet sich zudem eine größere Aussparung für den ESP32 USB-C Anschluss, der zugleich auch als Stromversogung dient.
