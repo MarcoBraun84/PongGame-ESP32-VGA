@@ -69,10 +69,10 @@ Die Kontroller-Form ermöglicht dem Spieler, den Kontroller einhändig auf dem T
 ## Software Installation
 - [Arduino IDE](https://www.arduino.cc/en/software)
 - [Library MPU6050](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn.zip), [github Library MPU6050](https://github.com/Tockn/MPU6050_tockn)
-- [Library MPU605069](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn69.zip)
+- [Library MPU605069](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/MPU6050_tockn69.zip) (geänderte I2C-Adresse)
 - [Library bitluni_ESP32Lib](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/bitluni_ESP32Lib.zip), [github bitluni ESP32lib](https://github.com/bitluni/ESP32Lib)
 
-Um den Game-Code zu kompilieren und zu übertragen muss die Arduino IDE installiert werdem. Nach der Installation der IDE, müssen die Librarys installiert werden, um den Code ausführen zukönnen. Hierfür kann in der IDE unter ```Sketch -> Include Library -> Add .ZIP Library``` die verlinkten Zip-Librarys installiert werden. Alternativ könnte man über ```Sketch -> Include Library -> Library Manger``` die Librarys suchen und installieren (nicht die modifizierte MPU605069-Library).
+Um den Game-Code zu kompilieren und zu übertragen muss die Arduino IDE installiert werdem. Nach der Installation der IDE, müssen die Librarys installiert werden, um den Code ausführen zukönnen. Hierfür können in der IDE unter ```Sketch -> Include Library -> Add .ZIP Library``` die verlinkten Zip-Librarys installiert werden. Alternativ könnte man über ```Sketch -> Include Library -> Library Manger``` die Librarys suchen und installieren (nicht die modifizierte MPU605069-Library).
 
 Weitherin muss das ESP32-Board hinzugefügt werden. Hierzu wird unter ```Tools -> Board -> Boards Manager...``` "esp32 by Espressif Systems" gesucht und installiert. Anschließend kann unter ```Tools -> Board -> esp32``` "ESP32 Dev Module" ausgewählt werden. Zum Hochladen des [PONG.ino](https://github.com/tiimiiiiiiiiii/pong-esp32-vga/blob/main/PONG.ino)-Codes muss nur noch unter ```Tools -> Port``` der angeschlossene ESP32-Port eingestellt werden.
 
